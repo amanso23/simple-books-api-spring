@@ -21,5 +21,9 @@ public class BookService {
     public Book findBookByAuthor(String author){
         return bookDao.findBookByAuthor(author);
     }
+
+    public Book saveBook(Book book){
+        return bookDao.save(book);
+    }
     
 }

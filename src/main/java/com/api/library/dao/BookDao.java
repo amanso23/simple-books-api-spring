@@ -17,6 +17,7 @@ public interface BookDao extends JpaRepository<Book, Long> {
     @Query("SELECT b FROM Book b WHERE b.author = :author") //consulta usando JPA
     public Book findBookByAuthor(String author);
 
+    @SuppressWarnings({ "null", "unchecked" })
+    public Book save(Book book);
+
 }
-
-
